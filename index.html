@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio — Yaroslav Tymchenko</title>
+<meta name="description" content="Cybersecurity portfolio — SOC & Pentesting" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Security Headers -->
+<meta http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' https://fonts.googleapis.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    font-src 'self' https://fonts.gstatic.com;
+    frame-ancestors 'none';
+    object-src 'none';
+    base-uri 'self';
+  ">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), autoplay=()">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<canvas id="matrixRain"></canvas>
+<div class="control-bar">
+  <button class="control-btn" id="themeBtn">🌙 Dark</button>
+  <button class="control-btn" id="langBtn">🇫🇮 Suomi</button>
+</div>
+
+<main>
+  <section class="hero">
+  <h1 id="title">Yaroslav Tymchenko</h1>
+    <p class="hero-lede" data-i18n-key="heroLede">ICT student & aspiring SOC Analyst</p>
+    <p id="desc" data-i18n-key="desc">Focused on log analysis, threat detection, and SIEM operations. Security+ certified, TryHackMe Top 1%, building hands-on SOC skills through home labs, detection engineering, and security automation.</p>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">Top 1%</span>
+        <span class="stat-text" data-i18n-key="statTryHackMe">TryHackMe ranking</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Security+</span>
+        <span class="stat-text" data-i18n-key="statCert">Certified</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">CySA+</span>
+        <span class="stat-text" data-i18n-key="statInProgress">In progress</span>
+      </div>
+    </div>
+
+    <div class="button-group">
+    <a href="https://linkedin.com/in/yaroslav-tymchenko-a08b22377/" target="_blank" rel="noopener noreferrer" class="button primary" id="btn1">LinkedIn</a>
+    <a href="https://github.com/ddl192" target="_blank" rel="noopener noreferrer" class="button" id="btn2">GitHub</a>
+      <a href="https://tryhackme.com/p/ddldld" target="_blank" rel="noopener noreferrer" class="button ghost" id="btn3">TryHackMe</a>
+    </div>
+  </section>
+
+  <section class="section-block capabilities featured-section" id="section-core">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n-key="capIntro">Core Focus</p>
+      <h2 class="section-title" data-i18n-key="capTitle">Log analysis & event correlation</h2>
+      <p class="section-copy" data-i18n-key="capBody">Threat detection, SIEM operations, network monitoring, and Python automation for SOC workflows.</p>
+    </div>
+    <div class="cap-grid">
+      <a class="cap-link" href="#section-siem">
+      <article>
+        <h3 data-i18n-key="cap1Title">Log Analysis &amp; Event Correlation</h3>
+        <p data-i18n-key="cap1Body">Analyzing security logs, correlating events, and identifying patterns in SIEM platforms.</p>
+      </article>
+      </a>
+      <a class="cap-link" href="#section-ioc">
+      <article>
+        <h3 data-i18n-key="cap2Title">Threat Detection &amp; IOC Enrichment</h3>
+        <p data-i18n-key="cap2Body">Automated IOC enrichment and threat intelligence validation for SOC triage workflows.</p>
+      </article>
+      </a>
+      <a class="cap-link" href="#section-siem">
+      <article>
+        <h3 data-i18n-key="cap3Title">SIEM Operations</h3>
+        <p data-i18n-key="cap3Body">Hands-on ELK &amp; Splunk experience in log ingestion, alert creation, and detection tuning.</p>
+      </article>
+      </a>
+      <a class="cap-link" href="#section-network">
+      <article>
+        <h3 data-i18n-key="cap4Title">Network Monitoring &amp; Packet Analysis</h3>
+        <p data-i18n-key="cap4Body">Wireshark &amp; PCAP investigations for incident response and anomaly detection.</p>
+      </article>
+      </a>
+      <a class="cap-link" href="#section-ioc">
+      <article>
+        <h3 data-i18n-key="cap5Title">Python Automation for SOC</h3>
+        <p data-i18n-key="cap5Body">Building automation tools for alert enrichment, event triage, and SOC workflow optimization.</p>
+      </article>
+      </a>
+    </div>
+  </section>
+
+  <section class="section-block certifications featured-section" id="section-creds" style="--feature-delay: .15s;">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n-key="certIntro">Credentials</p>
+      <h2 class="section-title" data-i18n-key="certTitle">Certifications &amp; practical experience</h2>
+    </div>
+    <div class="cert-grid">
+      <a class="cert-link" href="#section-learning">
+      <div class="cert-item">
+        <div class="cert-icon">✓</div>
+        <div>
+          <h3 data-i18n-key="cert1Title">CompTIA Security+ Certified</h3>
+          <p class="cert-meta" data-i18n-key="cert1Meta">Security+ certification completed.</p>
+        </div>
+      </div>
+      </a>
+      <a class="cert-link" href="#section-learning">
+      <div class="cert-item">
+        <div class="cert-icon">📚</div>
+        <div>
+          <h3 data-i18n-key="cert2Title">CySA+ in progress</h3>
+          <p class="cert-meta" data-i18n-key="cert2Meta">Advanced analytics &amp; incident handling.</p>
+        </div>
+      </div>
+      </a>
+      <a class="cert-link" href="#section-community">
+      <div class="cert-item">
+        <div class="cert-icon">⚡</div>
+        <div>
+          <h3 data-i18n-key="cert3Title">TryHackMe</h3>
+          <p class="cert-meta" data-i18n-key="cert3Meta">150+ solved rooms.</p>
+        </div>
+      </div>
+      </a>
+      <a class="cert-link" href="#section-learning">
+      <div class="cert-item">
+        <div class="cert-icon">🛠️</div>
+        <div>
+          <h3 data-i18n-key="cert4Title">Home SOC environment</h3>
+          <p class="cert-meta" data-i18n-key="cert4Meta">Sysmon, ELK, Sigma for continuous practice.</p>
+        </div>
+      </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="card-stack" id="section-projects">
+    <article class="vertical-card card-left enter-left" id="section-ioc">
+      <div class="card-heading">
+        <span class="card-label" data-i18n-key="card1Label">🛡️ Threat Analysis</span>
+        <h2 data-i18n-key="card1Title">Automated IOC Analyzer</h2>
+      </div>
+      <p class="card-body" data-i18n-key="card1Body">Developed a Python-based IOC analyzer integrating VirusTotal API to accelerate SOC triage, alert enrichment, and threat classification.</p>
+      <ul class="card-list">
+        <li data-i18n-key="card1Item1">Automated IOC lookups and threat scoring for hashes, domains, and IPs.</li>
+        <li data-i18n-key="card1Item2">Streamlined incident response by prioritizing high-risk alerts.</li>
+        <li data-i18n-key="card1Item3">Integrated threat intel into SOC workflows to reduce manual investigation time.</li>
+      </ul>
+      <div class="card-metrics">
+        <div>
+          <span class="metric-value">VirusTotal</span>
+          <span class="metric-label" data-i18n-key="card1Metric1">API integration</span>
+        </div>
+        <div>
+          <span class="metric-value">IOC</span>
+          <span class="metric-label" data-i18n-key="card1Metric2">Analysis tool</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="vertical-card card-right enter-right" id="section-sigma">
+      <div class="card-heading">
+        <span class="card-label" data-i18n-key="card2Label">⚙️ Detection Engineering</span>
+        <h2 data-i18n-key="card2Title">Sigma Rule Development</h2>
+      </div>
+      <p class="card-body" data-i18n-key="card2Body">Hands-on experience creating Sigma rules mapped to MITRE ATT&CK to detect suspicious activity in Windows event logs, Sysmon, and common attack paths.</p>
+      <ul class="card-list">
+        <li data-i18n-key="card2Item1">Developed Sigma rules for Windows logs &amp; Sysmon to detect TTPs and anomalous behaviors.</li>
+        <li data-i18n-key="card2Item2">Aligned detection logic with MITRE ATT&CK framework for structured threat coverage.</li>
+        <li data-i18n-key="card2Item3">Covered common attack paths and lateral movement techniques to improve SOC alerting.</li>
+      </ul>
+      <div class="card-metrics">
+        <div>
+          <span class="metric-value">Sigma</span>
+          <span class="metric-label" data-i18n-key="card2Metric1">Detection rules</span>
+        </div>
+        <div>
+          <span class="metric-value">MITRE</span>
+          <span class="metric-label" data-i18n-key="card2Metric2">ATT&CK aligned</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="vertical-card card-left enter-left" id="section-siem">
+      <div class="card-heading">
+        <span class="card-label" data-i18n-key="card3Label">📊 SIEM Operations</span>
+        <h2 data-i18n-key="card3Title">Hands-on ELK &amp; Splunk Experience</h2>
+      </div>
+      <p class="card-body" data-i18n-key="card3Body">Hands-on ELK &amp; Splunk experience across practical SOC workflows: log ingestion, normalization, alert creation, detection tuning, and dashboard development.</p>
+      <ul class="card-list">
+        <li data-i18n-key="card3Item1">Configured ELK for centralized logging and log correlation.</li>
+        <li data-i18n-key="card3Item2">Built Splunk correlation searches and dashboards for threat detection.</li>
+        <li data-i18n-key="card3Item3">Triaged events and investigated alerts using IOC hits and behavioral indicators.</li>
+        <li data-i18n-key="card3Item4">Applied detection logic to reduce false positives and accelerate SOC response.</li>
+      </ul>
+      <div class="card-metrics">
+        <div>
+          <span class="metric-value">ELK Stack</span>
+          <span class="metric-label" data-i18n-key="card3Metric1">Stack</span>
+        </div>
+        <div>
+          <span class="metric-value">Splunk</span>
+          <span class="metric-label" data-i18n-key="card3Metric2">SIEM Platform</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="vertical-card card-right enter-right" id="section-network">
+      <div class="card-heading">
+        <span class="card-label" data-i18n-key="card4Label">🌐 Network Monitoring</span>
+        <h2 data-i18n-key="card4Title">Wireshark &amp; PCAP Investigations</h2>
+      </div>
+      <p class="card-body" data-i18n-key="card4Body">Analyzing network traffic captures to support incident response, validate alerts, and identify anomalies.</p>
+      <ul class="card-list">
+        <li data-i18n-key="card4Item1">Conducting network triage during security investigations.</li>
+        <li data-i18n-key="card4Item2">Detecting and characterizing malicious traffic patterns.</li>
+        <li data-i18n-key="card4Item3">Performing deep packet inspection and protocol-level analysis.</li>
+        <li data-i18n-key="card4Item4">Leveraging PCAPs for threat hunting and alert verification.</li>
+      </ul>
+      <div class="card-metrics">
+        <div>
+          <span class="metric-value">Wireshark</span>
+          <span class="metric-label" data-i18n-key="card4Metric1">TCP/IP analysis</span>
+        </div>
+        <div>
+          <span class="metric-value">PCAP</span>
+          <span class="metric-label" data-i18n-key="card4Metric2">Forensic investigations</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section-block tech-stack featured-section" id="section-techstack" style="--feature-delay: .15s;">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n-key="techIntro">Technology Stack</p>
+      <h2 class="section-title" data-i18n-key="techTitle">SOC tools &amp; platforms</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-category">
+        <h3>SIEM &amp; Monitoring</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">ELK Stack</span>
+          <span class="tech-tag">Wazuh</span>
+          <span class="tech-tag">Splunk</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Network Analysis</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Wireshark</span>
+          <span class="tech-tag">tcpdump</span>
+          <span class="tech-tag">Snort / Suricata</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Endpoint &amp; Windows Security</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Sysmon</span>
+          <span class="tech-tag">KAPE</span>
+          <span class="tech-tag">Volatility</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Threat Detection</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Sigma Rules</span>
+          <span class="tech-tag">YARA</span>
+          <span class="tech-tag">MITRE ATT&amp;CK</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Threat Intelligence</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">VirusTotal</span>
+          <span class="tech-tag">MISP</span>
+          <span class="tech-tag">Shodan</span>
+          <span class="tech-tag">URLhaus</span>
+          <span class="tech-tag">OpenCTI</span>
+          <span class="tech-tag">STIX/TAXII</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Scripting &amp; OS</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Bash</span>
+          <span class="tech-tag">Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block learning featured-section" id="section-learning" style="--feature-delay: .25s;">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n-key="learningIntro">Continuous Growth</p>
+      <h2 class="section-title" data-i18n-key="learningTitle">Expanding SOC Capabilities</h2>
+      <p class="section-copy" data-i18n-key="learningBody">Developing hands-on skills in threat detection, alert validation, and SOC workflow automation.</p>
+    </div>
+    <div class="learning-grid">
+      <div class="learning-item">
+        <div class="learning-icon">⚙️</div>
+        <h3 data-i18n-key="learning1Title">CySA+ Preparation</h3>
+        <p data-i18n-key="learning1Body">Strengthening incident response, threat detection, and analytical reasoning aligned with certification standards.</p>
+      </div>
+      <div class="learning-item">
+        <div class="learning-icon">🧪</div>
+        <h3 data-i18n-key="learning2Title">SIEM Mastery</h3>
+        <p data-i18n-key="learning2Body">Tuning rules, building correlation logic, and performing threat hunting in ELK, Wazuh, and Splunk.</p>
+      </div>
+      <div class="learning-item">
+        <div class="learning-icon">🧩</div>
+        <h3 data-i18n-key="learning3Title">SOC Automation</h3>
+        <p data-i18n-key="learning3Body">Creating Python tools for IOC enrichment, event normalization, and triage acceleration.</p>
+      </div>
+      <div class="learning-item">
+        <div class="learning-icon">📚</div>
+        <h3 data-i18n-key="learning4Title">Windows Logs &amp; Sysinternals</h3>
+        <p data-i18n-key="learning4Body">Investigating event-level detections, process behavior, and endpoint activity for stronger Windows security monitoring.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block timeline-wrap featured-section" id="section-timeline" style="--feature-delay: .35s;">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n-key="timelineIntro">Recent Highlights</p>
+      <h2 class="section-title" data-i18n-key="timelineTitle">Key achievements &amp; projects</h2>
+    </div>
+    <ol class="timeline-block">
+      <li>
+        <span class="timeline-date" data-i18n-key="timelineAWhen">Aug 16, 2025</span>
+        <div>
+          <h3 data-i18n-key="timelineATitle">Developed IOC Analyzer with VirusTotal integration</h3>
+          <p data-i18n-key="timelineABody">To accelerate SOC triage and alert enrichment.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date" data-i18n-key="timelineBWhen">Oct 25, 2025</span>
+        <div>
+          <h3 data-i18n-key="timelineBTitle">Created Sigma rules for Windows logs &amp; Sysmon</h3>
+          <p data-i18n-key="timelineBBody">Aligned with MITRE ATT&amp;CK framework.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date" data-i18n-key="timelineCWhen">Oct 27, 2025</span>
+        <div>
+          <h3 data-i18n-key="timelineCTitle">Configured ELK Stack (Docker) and deployed Winlogbeat agent on Windows</h3>
+          <p data-i18n-key="timelineCBody">For centralized log collection.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section-block community featured-section" id="section-community" style="--feature-delay: .45s;">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n-key="communityIntro">Community Engagement</p>
+      <h2 class="section-title" data-i18n-key="communityTitle">Active Learning &amp; Practice</h2>
+    </div>
+    <div class="community-grid">
+      <div class="community-item">
+        <h3 data-i18n-key="community1Title">Active Learning &amp; Practice</h3>
+        <p data-i18n-key="community1Body">Engaged in TryHackMe and other cybersecurity platforms to sharpen SOC skills.</p>
+      </div>
+      <div class="community-item">
+        <h3 data-i18n-key="community2Title">Regular Practice</h3>
+        <p data-i18n-key="community2Body">Performing SIEM investigations, detection logic, and structured incident workflows in home labs.</p>
+      </div>
+      <div class="community-item">
+        <h3 data-i18n-key="community3Title">Continuous Learning</h3>
+        <p data-i18n-key="community3Body">Developing hands-on SOC capabilities through detection engineering, security automation, and incident response exercises.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3 data-i18n-key="footerConnect">Connect</h3>
+      <nav class="footer-links">
+        <a href="https://linkedin.com/in/yaroslav-tymchenko-a08b22377/" target="_blank" rel="noopener noreferrer" data-i18n-key="footerLinkedIn">LinkedIn</a>
+        <a href="https://github.com/ddl192" target="_blank" rel="noopener noreferrer" data-i18n-key="footerGitHub">GitHub</a>
+        <a href="https://tryhackme.com/p/ddldld" target="_blank" rel="noopener noreferrer" data-i18n-key="footerTryHackMe">TryHackMe</a>
+      </nav>
+    </div>
+    <div class="footer-section">
+      <p class="footer-note" data-i18n-key="footerNote">Security-focused portfolio · SOC & Threat Detection</p>
+      <p class="footer-copyright">&copy; 2025 Yaroslav Tymchenko</p>
+    </div>
+  </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
